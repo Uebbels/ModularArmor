@@ -1,0 +1,25 @@
+package com.Uebbels.modulararmor.util;
+
+import com.Uebbels.modulararmor.ModularArmor;
+import com.Uebbels.modulararmor.items.armor.ModArmorMaterial;
+import net.minecraft.inventory.EquipmentSlotType;
+import net.minecraft.item.ArmorItem;
+import net.minecraft.item.IArmorMaterial;
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemGroup;
+import net.minecraftforge.fml.RegistryObject;
+import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.minecraftforge.registries.DeferredRegister;
+import net.minecraftforge.registries.ForgeRegistries;
+
+public class RegistryHandler {
+
+    public static final DeferredRegister<Item> ITEMS = new DeferredRegister<Item>(ForgeRegistries.ITEMS, ModularArmor.MODID);
+
+    public static void init() {
+        ITEMS.register(FMLJavaModLoadingContext.get().getModEventBus());
+    }
+
+    // Items
+    public static final RegistryObject<Item> EMERALD_CHESTPLATE = ITEMS.register("emerald_chestplate", () -> new ArmorItem(ModArmorMaterial.EMERALD, EquipmentSlotType.CHEST, (new Item.Properties().group(ItemGroup.COMBAT))));
+}
