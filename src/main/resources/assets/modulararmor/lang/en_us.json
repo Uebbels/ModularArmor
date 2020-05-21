@@ -1,3 +1,6 @@
 {
-  "item.modulararmor.emerald_chestplate" : "Emerald Chestplate"
+  "item.modulararmor.emerald_helmet" : "Emerald Helmet",
+  "item.modulararmor.emerald_chestplate" : "Emerald Chestplate",
+  "item.modulararmor.emerald_leggings" : "Emerald Leggings",
+  "item.modulararmor.emerald_boots" : "Emerald Boots"
 }

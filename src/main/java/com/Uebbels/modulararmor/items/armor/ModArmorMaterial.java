@@ -1,5 +1,6 @@
 package com.Uebbels.modulararmor.items.armor;
 
+import com.Uebbels.modulararmor.ModularArmor;
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.IArmorMaterial;
 import net.minecraft.item.Items;
@@ -14,7 +15,7 @@ import java.util.function.Supplier;
 
 public enum ModArmorMaterial implements IArmorMaterial {
 
-    EMERALD("emerald", 33, new int[]{3, 6, 8, 3}, 25, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 2.0F, () -> {
+    EMERALD(ModularArmor.MODID +":emerald", 33, new int[]{3, 6, 8, 3}, 25, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 2.0F, () -> {
         return Ingredient.fromItems(Items.EMERALD);
     });
 
